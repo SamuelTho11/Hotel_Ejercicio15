@@ -10,13 +10,11 @@ package com.mycompany.hotel_ejercicio15.modelo;
  */
 public abstract class Habitacion {
     private int numeroHabitacion;
-    double precioSencila;
-    double precioSuite;
+    double precioBase;
 
-    public Habitacion(int numeroHabitacion, double precioSencila, double precioSuite) {
+    public Habitacion(int numeroHabitacion, double precioBase) {
         this.numeroHabitacion = numeroHabitacion;
-        this.precioSencila = 80000;
-        this.precioSuite = 100000;
+        this.precioBase = precioBase;
     }
 
     public int getNumeroHabitacion() {
@@ -27,28 +25,24 @@ public abstract class Habitacion {
         this.numeroHabitacion = numeroHabitacion;
     }
 
-    public double getPrecioSencila() {
-        return precioSencila;
+    public double getPrecioBase() {
+        return precioBase;
     }
 
-    public void setPrecioSencila(double precioSencila) {
-        this.precioSencila = precioSencila;
+    public void setPrecioBase(double precioBase) {
+        this.precioBase = precioBase;
     }
-
-    public double getPrecioSuite() {
-        return precioSuite;
-    }
-
-    public void setPrecioSuite(double precioSuite) {
-        this.precioSuite = precioSuite;
-    }
-
+   
     public void reservar(String cliente){
-        
+        System.out.println("Habitacion reservada para: "+ cliente);
     }
     
     public void reservar(String cliente, int noches){
-        
+        System.out.println("Habitacion reservada para " + cliente + ", con esta cantidad de noches: "+ noches);
+    }
+    
+    public static void nombreHotel() {
+        System.out.println("Hotel las Americas");
     }
     
     public abstract double calcularTarifa(int noches);

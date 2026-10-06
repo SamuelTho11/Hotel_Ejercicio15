@@ -13,10 +13,10 @@ public class Suite extends Habitacion {
     public Suite(int numeroHabitacion, double precioBase) {
         super(numeroHabitacion, precioBase);
     }
-   
+
     @Override
     public double calcularTarifa(int noches) {
-        return precioSuite * noches;
+        return getPrecioBase() * noches;
     }
     
 }

@@ -13,10 +13,10 @@ public class Sencilla extends Habitacion{
     public Sencilla(int numeroHabitacion, double precioBase) {
         super(numeroHabitacion, precioBase);
     }
-
+    
     @Override
     public double calcularTarifa(int noches) {
-        return precioBase * noches;
+        return getPrecioBase() * noches;
     }
     
 }
